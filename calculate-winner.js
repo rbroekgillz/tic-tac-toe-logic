@@ -1,6 +1,7 @@
-// calculate-winner.js
 function calculateWinner(board) {
-  // implement the logic, either return null, 'x' or 'o'
+  const calculateWinnerOfRow = row => row.reduce((winner, symbol) => winner === symbol ? symbol : null);
+  const calculateWinnerOfBoard = arrOfWinners => arrOfWinners.reduce((winner, symbol) => typeof symbol === 'string' ? symbol : winner);
+  return calculateWinnerOfBoard(board.map(calculateWinnerOfRow));
 }
 
-module.exports = { calculateWinner };
+module.exports = {calculateWinner};
