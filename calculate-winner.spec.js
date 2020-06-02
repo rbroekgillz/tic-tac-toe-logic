@@ -29,30 +29,30 @@ test('Vertical winner O on column 1 should work', () => {
     ['o', 'x', 'x'],
     ['o', null, 'o'],
     ['o', 'x', 'o']
-  ]
-  expect(calculateWinner(board)).toBe('o')
-})
+  ];
+  expect(calculateWinner(board)).toBe('o');
+});
 test('Vertical winner X on column 3 should work', () => {
   const board = [
     ['o', null, 'x'],
     ['x', null, 'x'],
     ['o', null, 'x']
-  ]
-  expect(calculateWinner(board)).toBe('x')
-})
+  ];
+  expect(calculateWinner(board)).toBe('x');
+});
 test('Diagonal winner X should work', () => {
   const board = [
     ['o', null, 'x'],
     ['o', 'x', 'o'],
     ['x', null, 'o']
-  ]
-  expect(calculateWinner(board)).toBe('x')
-})
+  ];
+  expect(calculateWinner(board)).toBe('x');
+});
 test('Diagonal winner O should work', () => {
   const board = [
     ['o', null, 'x'],
     ['x', 'o', null],
     ['x', null, 'o']
-  ]
-  expect(calculateWinner(board)).toBe('o')
-})
+  ];
+  expect(calculateWinner(board)).toBe('o');
+});
