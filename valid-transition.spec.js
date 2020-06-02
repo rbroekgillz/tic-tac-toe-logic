@@ -55,7 +55,7 @@ test("Multiple moves at once should be invalid", () => {
         [null, 'o', 'x'],
         ['x', 'x', 'x'],
         ['x', 'o', 'o']
-    ]
+    ];
 
     expect(isValidTransition('x', from, to)).toBe(false);
 });
