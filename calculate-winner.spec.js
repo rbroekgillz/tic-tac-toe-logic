@@ -40,3 +40,19 @@ test('Vertical winner X on column 3 should work', () => {
   ]
   expect(calculateWinner(board)).toBe('x')
 })
+test('Diagonal winner X should work', () => {
+  const board = [
+    ['o', null, 'x'],
+    ['o', 'x', 'o'],
+    ['x', null, 'o']
+  ]
+  expect(calculateWinner(board)).toBe('x')
+})
+test('Diagonal winner O should work', () => {
+  const board = [
+    ['o', null, 'x'],
+    ['x', 'o', null],
+    ['x', null, 'o']
+  ]
+  expect(calculateWinner(board)).toBe('o')
+})
