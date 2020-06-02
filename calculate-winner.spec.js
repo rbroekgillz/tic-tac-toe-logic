@@ -24,3 +24,19 @@ test('No horizontal winner should return null', () => {
   ];
   expect(calculateWinner(board)).toBeNull();
 });
+test('Vertical winner O on column 1 should work', () => {
+  const board = [
+    ['o', 'x', 'x'],
+    ['o', null, 'o'],
+    ['o', 'x', 'o']
+  ]
+  expect(calculateWinner(board)).toBe('o')
+})
+test('Vertical winner X on column 3 should work', () => {
+  const board = [
+    ['o', null, 'x'],
+    ['x', null, 'x'],
+    ['o', null, 'x']
+  ]
+  expect(calculateWinner(board)).toBe('x')
+})
